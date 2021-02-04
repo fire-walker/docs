@@ -1,0 +1,33 @@
+site_name: Docs
+nav:
+    - Home: index.md
+    - Postfix: postfix.md
+    - UFW: ufw.md
+    - Fail2Ban: fail2ban.md
+
+
+theme: 
+    name: material
+    palette:
+        scheme: slate
+        primary: blue grey
+    features:
+        - header.autohide
+
+
+markdown_extensions:
+    - pymdownx.highlight
+    - pymdownx.superfences
+    - pymdownx.keys
+    - pymdownx.details
+    - pymdownx.smartsymbols
+    - footnotes
+    - admonition
+    - pymdownx.betterem:
+        smart_enable: all
+    - toc:
+        toc_depth: 0
+
+
+extra_css:
+    - stylesheets/style.css
