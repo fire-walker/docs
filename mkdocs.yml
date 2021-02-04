@@ -4,6 +4,7 @@ nav:
     - Postfix: postfix.md
     - UFW: ufw.md
     - Fail2Ban: fail2ban.md
+    - Git: git.md
 
 
 theme: 
