@@ -14,12 +14,12 @@
   --md-code-hl-number-color:       #ff8686; /* codebox number */
   --md-code-hl-keyword-color:      #40c3ca; /* codebox keywords */
 
-  --md-admonition-bg-color:        #141b24;
+  --md-admonition-bg-color:        #111b29;
 
   --md-default-fg-color--lightest: #bebaba4a;
   --md-default-fg-color--lighter:  #bebaba2e;
 
-  --md-typeset-a-color:            #3db4f2; 
+  --md-typeset-a-color:            #3db4f2;
 }
   
 /* table background */
