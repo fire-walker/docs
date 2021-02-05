@@ -1,9 +1,9 @@
 ## Commands
 
-| Syntax                  | Description                     |
-| -----------             | -----------                     |
-| `veracrypt -t -l`       | view mounted volumes            |
-| `veracrypt -t -d`       | unmount all (if no path given)  |
+| Syntax                       | Description                     |
+| -----------                  | -----------                     |
+| `veracrypt -t -l`            | view mounted volumes            |
+| `veracrypt -t -d <path>`     | unmount all (if no path given)  |
 
 ## Troubleshooting
 

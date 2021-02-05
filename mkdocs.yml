@@ -42,10 +42,9 @@ extra_css:
 nav:
     - Home: index.md
     - System:
+        - General:      pages/general.md
         - Storage:      pages/storage.md
-        - Groups:       pages/groups.md
         - UFW:          pages/ufw.md
-        - chsh:         pages/chsh.md
     - Applications:
         - Postfix:      pages/postfix.md
         - Fail2Ban:     pages/fail2ban.md
