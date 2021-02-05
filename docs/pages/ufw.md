@@ -2,7 +2,7 @@
 
 Put the apps at `/etc/ufw/applications.d/`
 
-``` conf
+``` properties
 [appname]
 title=1-liner here
 description=a longer line here
@@ -14,7 +14,7 @@ description=Most possibly this would work. I guess
 ports=25,465,587,110,995,143,993/tcp
 ```
 
-!!! example "Necessary Apps"
+!!! example ""
     - OpenSSH - 7777
     - Nginx - 80, 443
     - SMTP Ports - 587

@@ -1,19 +1,18 @@
 site_name: Docs
-nav:
-    - Home: index.md
-    - Postfix: postfix.md
-    - UFW: ufw.md
-    - Fail2Ban: fail2ban.md
-    - Git: git.md
+repo_url: https://github.com/fire-walker/docs
+repo_name: fire-walker/docs
 
 
 theme: 
     name: material
     palette:
-        scheme: slate
-        primary: blue grey
-    features:
-        - header.autohide
+        scheme: custom
+    font:
+        text: Noto Sans
+        code: Fira Code
+    icon:
+        repo: fontawesome/brands/github
+        logo: octicons/book-16
 
 
 markdown_extensions:
@@ -27,8 +26,32 @@ markdown_extensions:
     - pymdownx.betterem:
         smart_enable: all
     - toc:
-        toc_depth: 0
+        permalink: true
+
+
+plugins:
+    - git-revision-date-localized:
+        type: timeago
 
 
 extra_css:
-    - stylesheets/style.css
+    - stylesheets/custom.css
+
+
+# Page Tree
+nav:
+    - Home: index.md
+    - System:
+        - Storage:      pages/storage.md
+        - Groups:       pages/groups.md
+        - UFW:          pages/ufw.md
+        - chsh:         pages/chsh.md
+    - Applications:
+        - Postfix:      pages/postfix.md
+        - Fail2Ban:     pages/fail2ban.md
+        - Git:          pages/git.md
+        - Veracrypt:    pages/veracrypt.md
+        - Tor:          pages/tor.md
+        - PHP:          pages/php.md
+        - Logwatch:     pages/logwatch.md
+

@@ -30,7 +30,7 @@ usermod -a -G postfix <username>
 
 
 After installation edit postfix config file at `/etc/postfix/main.cf`. Find suitable settings from the reference[^1]
-``` bash
+``` properties
 mydestination = localhost.domain, localhost
 relayhost = [<SMTP hostname>]:587
 smtp_sasl_auth_enable = yes
@@ -84,13 +84,13 @@ sudo service postfix reload
 
 ## Troubleshooting
 
-!!! info "Just a warning"
+!!! warning ""
     If you encounter the warning below when checking config. Just act as if you didn't see it[^2]
     ```
     postfix/postfix-script: warning: symlink leaves directory: /etc/postfix/./makedefs.out
     ```
 
-!!! error "Auth error"
+!!! error ""
     The `535 Authentication Error` usually implies an error in the data we give. May it be a password, a link or the hostname.
 
 

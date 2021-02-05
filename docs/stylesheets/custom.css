@@ -1,0 +1,92 @@
+[data-md-color-scheme="custom"] {
+  --md-primary-fg-color:           #151f2e; /* bar colors */
+  --md-default-bg-color:           #0b1622; /* background color */   
+  --md-default-fg-color:           #b4c8da; /* text color */
+  --md-default-fg-color--light:    #8596a5; /* text title color */
+  --md-primary-bg-color:           #8596a5; /* topbar icons */
+  --md-accent-fg-color:            #d878cb; /* accent */
+
+
+  --md-code-bg-color:              #151f2e; /* codebox back */
+  --md-code-fg-color:              #e0cbd8; /* codebox text */
+  --md-code-hl-string-color:       #7df9bb; /* codebox strings */
+  --md-code-hl-constant-color:     #b5a8f6; /* codebox const */
+  --md-code-hl-number-color:       #ff8686; /* codebox number */
+  --md-code-hl-keyword-color:      #40c3ca; /* codebox keywords */
+
+  --md-admonition-bg-color:        #141b24;
+
+  --md-default-fg-color--lightest: #bebaba4a;
+  --md-default-fg-color--lighter:  #bebaba2e;
+
+  --md-typeset-a-color:            #3db4f2; 
+}
+  
+/* table background */
+.md-typeset table:not([class]) {
+  background-color: var(--md-admonition-bg-color);
+}
+
+/* table header background, text and border */
+.md-typeset table:not([class]) th {
+  background-color: var(--md-primary-fg-color);
+  color: var(--md-default-fg-color);
+  border-bottom: solid 1px var(--md-accent-fg-color);
+}
+
+/* left nav repo style */
+.md-nav__source {
+  background-color: var(--md-primary-fg-color);
+  border-top: solid 2px var(--md-accent-fg-color);
+}
+
+/* topbar border */
+.md-header {
+  border-bottom: solid 1px var(--md-accent-fg-color);
+}
+
+/* hide the hideous footer prev/next */
+.md-footer-nav {
+  display: none;
+}
+
+/* footer top border and background color */
+.md-footer-meta {
+  background-color: var(--md-primary-fg-color);
+  border-top: solid 4px var(--md-accent-fg-color);
+}
+
+
+/* admonition topbar background */
+.md-typeset .example > .admonition-title, .md-typeset .example > summary {
+  background-color: var(--md-primary-fg-color);
+}
+
+.md-typeset .danger > .admonition-title, .md-typeset .danger > summary, .md-typeset .error > .admonition-title, .md-typeset .error > summary {
+  background-color: var(--md-primary-fg-color);
+}
+
+.md-typeset .warning > .admonition-title, .md-typeset .warning > summary, .md-typeset .attention > .admonition-title, .md-typeset .attention > summary, .md-typeset .caution > .admonition-title, .md-typeset .caution > summary {
+  background-color: var(--md-primary-fg-color);
+}
+
+.md-typeset .info > .admonition-title, .md-typeset .info > summary, .md-typeset .todo > .admonition-title, .md-typeset .todo > summary {
+  background-color: var(--md-primary-fg-color);
+}
+
+
+@media screen and (max-width: 76.1875em) {
+  /* left nav post contents title back */
+  .md-nav--primary .md-nav__title {
+    background-color: var(--md-primary-fg-color);
+  }
+}
+
+@media screen and (min-width: 76.25em) {
+  /* desktop left nav */
+  .md-nav.md-nav--primary {
+    background-color: #192435;
+    border-radius: 5px;
+    padding: 10px 0;
+  }  
+}

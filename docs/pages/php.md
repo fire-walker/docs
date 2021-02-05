@@ -1,19 +1,19 @@
 ## Version Mayhem
 
 Start by deleting every php version
-```
+``` bash
 sudo apt-get purge php7.*
 sudo apt-get autoclean
 sudo apt-get autoremove
 ```
 
-Follow a suitable guide and install the correct version
+Then follow a suitable guide and install the correct version
 
 
 ## Switching Acive Version
 
 Enabling and disabling a specific version
-```
+``` bash
 # disable
 sudo a2dismod php7.0
 
@@ -21,8 +21,8 @@ sudo a2dismod php7.0
 sudo a2enmod php7.2
 ```
 
-Then rerun apache or nginx
-```
+Then rerun web server
+``` bash
 service apache2 restart
 service nginx restart
 ```

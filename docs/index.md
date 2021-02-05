@@ -1,17 +1,24 @@
-# Welcome to MkDocs
+# Helloo
 
-For full documentation visit [mkdocs.org](https://mkdocs.org).
+## What is this?
 
-## Commands
+This is basically [my](https://github.com/fire-walker) unix knowledge base.
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs help` - Print this help message.
+## Sites
 
-## Project layout
+??? tip "Anilist Tracker"
+    Visit it [here](https://anime.thelonelylands.com)
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+    Find the code [here](https://github.com/fire-walker/anime-tracker)
+
+
+??? tip "Birthday Tracker"
+    Visit it [here](https://bday.thelonelylands.com)
+
+    Find the code [here](https://github.com/fire-walker/birthday-tracker)
+
+
+??? tip "Mythicon - Demo"
+    Visit it [here](https://project.thelonelylands.com)
+
+    Find the code [here](https://github.com/fire-walker/mythicon-challenge)
