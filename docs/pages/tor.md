@@ -7,6 +7,17 @@ sudo apt install tor && sudo service tor stop
 
 
 Then edit it's config file `/etc/tor/torcc`
+``` conf
+SocksPort 0
+SocksListerAddress 127.0.0.1
+
+RunAsDaemon 1
+DataDirectory /var/lib/tor
+
+HiddenServiceDir /var/lib/tor/my_onion_service
+HiddenServicePort 80 127.0.0.1:8921
+```
+
 
 After configurations start tor.
 ``` bash

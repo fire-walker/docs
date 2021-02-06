@@ -53,4 +53,5 @@ nav:
         - Tor:          pages/tor.md
         - PHP:          pages/php.md
         - Logwatch:     pages/logwatch.md
+        - Webhooks:     pages/webhooks.md
 
