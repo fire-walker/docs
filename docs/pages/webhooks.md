@@ -51,8 +51,12 @@ WantedBy=multi-user.target
 
 Then run and check if it works
 ``` bash
-systemctl enable webhook
-systemctl start webhook
+# reload systemd
+sudo systemctl daemon-reload
 
+sudo systemctl enable webhook
+sudo systemctl start webhook
+
+# logs
 journalctl -u webhook 
 ```
