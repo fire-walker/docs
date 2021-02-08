@@ -18,13 +18,19 @@ When testing run this command to pop a hook instance for the `hook.json` config.
 webhook -hooks 'hook.json' -hotreload -verbose
 ```
 
-The above will start up on the default port `9000`
+The above will start up on the default port `9000`. The `hook-name` is what's specified in the `id` field of the json config file.
 
 ``` link
 http://localhost:9000/hooks/hook-name
 ```
 
-## Deployment
+## Connections
+
+### Github
+
+Check out how [here](https://docs.github.com/en/github-ae@latest/developers/webhooks-and-events/creating-webhooks)
+
+## Instance Service
 
 Remember, webhook doesn't have a command to create background services.
 So, you must either;
@@ -37,9 +43,9 @@ So, you must either;
 
 Then route all traffic from the port through an Nginx reverse proxy using an SSL cert provided by certbot and your done.
 
-### Webhook Service
+### Existing Service
 
-Using the webhook service config to run hook instances
+Using the default webhook service config to run hook instances. If `/etc/webhook.conf` doesn't exist, just create a new one.
 
 ``` bash
 # paste the hooks in here
@@ -53,7 +59,7 @@ sudo systemctl start webhook
 
 Using a systemd service to run a hook instance. Give it a name like `webhook.service` and put it inside of `/etc/systemd/system`
 
-``` conf
+``` ini
 [Unit]
 Description=webhook
 

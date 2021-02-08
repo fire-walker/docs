@@ -21,6 +21,8 @@ markdown_extensions:
     - pymdownx.keys
     - pymdownx.details
     - pymdownx.smartsymbols
+    - pymdownx.tasklist:
+        custom_checkbox: true
     - footnotes
     - admonition
     - pymdownx.betterem:

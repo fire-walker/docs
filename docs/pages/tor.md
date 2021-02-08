@@ -9,7 +9,7 @@ sudo apt install tor && sudo service tor stop
 
 Then edit it's config file `/etc/tor/torcc`
 
-``` conf
+``` properties
 SocksPort 0
 SocksListerAddress 127.0.0.1
 
