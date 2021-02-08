@@ -5,19 +5,39 @@ Install the [webhook](https://github.com/adnanh/webhook) package
 sudo apt install webhook
 ```
 
-When testing run this command to popup an instance hook instance for the `hook.json` config. The `hotreload` flag watches for config file changes and automatically reloads the hook instance.
+Create a system user and group to handle webhook instance services. Check out how [here](../general/#system-user).
+
+Then go ahead and create a `<hookname>.json` file. Check out the official [docs](https://github.com/adnanh/webhook/tree/master/docs) for more info.
+
+
+
+## Testing 
+
+When testing run this command to pop a hook instance for the `hook.json` config. The `hotreload` flag watches for config file changes and automatically reloads the hook instance.
 ``` bash
 webhook -hooks 'hook.json' -hotreload -verbose
 ```
 
+The above will start up on the default port `9000`
+``` 
+http://localhost:9000/hooks/hook-name
+```
+
+## Deployment
+
 Remember, webhook doesn't have a command to create background services.
 So, you must either;
 
-- create a specific systemd service for each hook instance
-- paste hooks inside `/etc/webhook.conf` and use the existing webhook service
+!!! info ""
+    Create a specific systemd service for each hook instance
+
+!!! info ""
+    Paste hooks inside `/etc/webhook.conf` and use the existing `webhook` service
+
+Then route all traffic from the port throught an Nginx reverse proxy using an SSL cert provided by certbot and your done.
 
 
-## Webhook Service
+### Webhook Service
 
 Using the webhook service config to run hook instances
 ``` bash
@@ -29,7 +49,7 @@ sudo systemctl start webook
 ```
 
 
-## Systemd Service
+### Systemd Service
 
 Using a systemd service to run a hook instance. Give it a name like `webhook.service` and put it inside of `/etc/systemd/system`
 ``` conf

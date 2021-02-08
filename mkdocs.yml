@@ -54,4 +54,6 @@ nav:
         - PHP:          pages/php.md
         - Logwatch:     pages/logwatch.md
         - Webhooks:     pages/webhooks.md
+        - SQL:          pages/sql.md
+        - Flask:        pages/flask.md
 

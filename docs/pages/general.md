@@ -35,6 +35,18 @@ usermod -a -G sudo <username>
 ```
 
 
+## System User
+
+A user with no home directory, login shell nor password. It's basically a no-login dummy account made solely to containerize services.
+``` bash
+# create a system user and group of the same name
+sudo useradd --system --no-create-home --shell=/sbin/nologin <username>
+
+# set their permissions
+sudo chown -R root:<username> /path/to/change
+sudo chmod -R 775 /path/to/change
+```
+
 
 ## chsh
 
