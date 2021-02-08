@@ -19,14 +19,12 @@ ports=25,465,587,110,995,143,993/tcp
     - Nginx - 80, 443
     - SMTP Ports - 587
 
-
-
 ## Default rules
+
 ``` bash
 ufw default deny incoming
 ufw default allow outgoing
 ```
-
 
 ## Commands
 
