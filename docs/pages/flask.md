@@ -11,7 +11,6 @@ def add_header(r):
     r.headers["Expires"] = "0"
     r.headers["Cache-Control"] = "public, max-age=0"
     return r
-
 ```
 
 ## Deployment
@@ -91,6 +90,9 @@ WantedBy=multi-user.target
 ```
 
 ``` bash
+# reload systemd
+sudo systemctl daemon-reload
+
 # start it
 sudo systemctl enable <app-service>
 sudo systemctl start <app-service>
@@ -103,26 +105,29 @@ sudo systemctl status <app-service>
 
 Create a webhook instance json file and connect it with Github to listen to push requests from the repo. More info [here](../webhooks/#setup).
 
-Then create a [new group](../general/#groups) for the flask app and couple it with the already existing `webhook` user created when setting up the webhook application. In it whitelist the `systemctl` commands for dealing with the gunicorn service.
+Then create a [new group](../general/#groups) for the flask app and couple it with the already existing `webhook` user created when setting up the webhook application. In it [whitelist](../general/#whitelisting) the `systemctl` commands for dealing with the gunicorn service.
 
-Write a systemd service file with the `webhook` user and the new group for the hook instance. Find out how [here](../webhooks/#systemd-service)
+Write a systemd service file with the `webhook` user and the new group for the hook instance. Find out how [here](../webhooks/#systemd-service).
 
 ## Integration Script
 
-Since systemd runs services in isolated environments. Without access to the user shell nor any environment variables. So, for private repos an ssh-agent needs to be started every time the script is run for Github authentication. More info [here](../git/#automated-deployment)
+Since systemd runs services in isolated environments. Without access to the user shell nor any environment variables. So, for private repos an ssh-agent needs to be started every time the script is run for Github authentication. More info [here](../git/#automated-deployment).
 
-First clean the repo of any untracked changes. Then pull the latest commit. Here only use the `systemctl` commands that were defined in the group the hook instance is running on.
+First clean the repo of any untracked changes[^3]. Then pull the latest commit. Here only use the `systemctl` commands that were defined in the group the hook instance is running on.
 
 ``` bash
-git clean -f
+# clean up
+git reset
+git checkout .
+git clean -fdx
+
+# sync to latest
 git pull
 
+# reload site
 systemctl restart <app-service>
 ```
 
-!!! info ""
-    **Always remember to kill what you start.**
-
-
 [^1]: https://phoenixnap.com/kb/how-to-create-mariadb-user-grant-privileges
 [^2]: https://stackoverflow.com/questions/54834088/python-database-connection-for-mariadb-using-sqlalchemy
+[^3]: https://stackoverflow.com/questions/14075581/git-undo-all-uncommitted-or-unsaved-changes

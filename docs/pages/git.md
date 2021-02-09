@@ -48,3 +48,7 @@ DISPLAY=:0 SSH_ASKPASS="/abs/path/.ask-pass" ssh-add ~/.ssh/<key-name>
 # kill ssh-agent
 trap "ssh-agent -k" exit
 ```
+
+!!! info ""
+    **Always remember to kill what you start.**
+

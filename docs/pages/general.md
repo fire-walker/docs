@@ -18,6 +18,9 @@ awk '{print $<col_num>}'
 
 # port usage
 netstat -pnltu
+
+# specific port usage
+lsof -i :9000
 ```
 
 
@@ -34,6 +37,21 @@ Add a user to sudoers
 
 ``` bash
 usermod -a -G sudo <username>
+```
+
+### Whitelisting
+
+Whitelisting a command or set of commands for a group allows anyone who's in it to run them without `sudo`. This is done by creating a new file inside of `/etc/sudoers.d`[^2].
+
+``` bash
+sudo visudo -f "/etc/sudoers.d/<file-name>"
+```
+
+Inside it the following properties whitelists the app[^3]. Remember to give the abs path for the application. Use `which <app-name>` to find it.
+
+``` properties
+Cmnd_Alias <SET-NAME> = <abs-app-path> command, <apb-app-path> command
+%<group-name> ALL=(ALL) NOPASSWD: <SET-NAME>
 ```
 
 ## System User
@@ -76,12 +94,24 @@ getent group
 Add user to a group
 
 ``` bash
-usermod -a -G group username
+usermod -a -G group <username>
+```
+
+What groups is a user in. If there's no args, groups of current user are shown.
+
+``` bash
+groups <user>
+```
+
+Create new group
+
+``` bash
+groupadd <group>
 ```
 
 Make sure to restart the services that are responsible for the groups after adding a user into one.
 
-Necessary groups;
+Necessary groups for reg user;
 
 - docker
 - sudo
@@ -112,3 +142,5 @@ gpg --output <private.pgp> --armor --export-secret-key -r <recipient>
 ```
 
 [^1]: https://ubuntuforums.org/showthread.php?t=1702833
+[^2]: https://askubuntu.com/questions/930768/adding-local-content-in-etc-sudoers-d-instead-of-directly-modifying-sodoers-fi
+[^3]: https://askubuntu.com/questions/692701/allowing-user-to-run-systemctl-systemd-services-without-password
