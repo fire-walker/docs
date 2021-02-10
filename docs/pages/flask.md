@@ -64,6 +64,7 @@ To run a flask app in development you need a WSGI HTTP Server to serve and run i
 ### Development
 
 When in development you can run `gunicorn` in the shell. The `<app-name>` refers to the file name of the flask app and the `app` refers to the name of the callable within it.
+
 ``` bash
 # run it on port 5000
 gunicorn --bind localhost:5000 <app-name>:app
@@ -71,9 +72,10 @@ gunicorn --bind localhost:5000 <app-name>:app
 
 ### Production
 
-When deploying, create a systemd service for the `gunicorn` app and copy it into `/etc/systemd/systems`. See more info about creating systemd services here. 
+When deploying, create a systemd service for the `gunicorn` app and copy it into `/etc/systemd/systems`. See more info about creating systemd services [here](). 
 
 Systemd expects the full path of `gunicorn`. See more about workers and optimizations [here](https://medium.com/building-the-system/gunicorn-3-means-of-concurrency-efbb547674b7).
+
 ``` ini
 [Unit]
 Description=Gunicorn instance serving the app

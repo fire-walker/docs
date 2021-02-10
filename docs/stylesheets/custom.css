@@ -24,6 +24,7 @@
   --md-typeset-a-color:            #3db4f2;
 }
 
+
 /* desktop left topbar logo */
 .md-header-nav__button.md-logo {
   display: none;
@@ -40,6 +41,12 @@
   padding: 1em 1.1764705882em;
 }
 
+/* codebox left right spacing on medium screen */
+.md-typeset > .highlight {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 /* adapt to codebox padding change */
 .md-clipboard {
   top: .7em;
@@ -48,6 +55,7 @@
 /* table background */
 .md-typeset table:not([class]) {
   background-color: var(--md-admonition-bg-color);
+  border-radius: 3px
 }
 
 /* table header background, text and border */
@@ -86,21 +94,47 @@
 }
 
 
+
+
 /* admonition topbar background */
 .md-typeset .example > .admonition-title, .md-typeset .example > summary {
   background-color: var(--md-primary-fg-color);
 }
-
 .md-typeset .danger > .admonition-title, .md-typeset .danger > summary, .md-typeset .error > .admonition-title, .md-typeset .error > summary {
   background-color: var(--md-primary-fg-color);
 }
-
 .md-typeset .warning > .admonition-title, .md-typeset .warning > summary, .md-typeset .attention > .admonition-title, .md-typeset .attention > summary, .md-typeset .caution > .admonition-title, .md-typeset .caution > summary {
   background-color: var(--md-primary-fg-color);
 }
-
 .md-typeset .info > .admonition-title, .md-typeset .info > summary, .md-typeset .todo > .admonition-title, .md-typeset .todo > summary {
   background-color: var(--md-primary-fg-color);
+}
+
+
+/* admonition left bar colors */
+.md-typeset .admonition.example, .md-typeset details.example {
+  border-color: #8852ff;
+}
+.md-typeset .admonition.danger, .md-typeset details.danger, .md-typeset .admonition.error, .md-typeset details.error {
+  border-color: #ff4683;
+}
+.md-typeset .admonition.warning, .md-typeset details.warning, .md-typeset .admonition.attention, .md-typeset details.attention, .md-typeset .admonition.caution, .md-typeset details.caution {
+  border-color: #ffb05c;
+}
+.md-typeset .admonition.tip, .md-typeset details.tip, .md-typeset .admonition.important, .md-typeset details.important, .md-typeset .admonition.hint, .md-typeset details.hint {
+  border-color: #48c8b7;
+}
+
+
+.md-typeset .tip > .admonition-title, .md-typeset .tip > summary, .md-typeset .important > .admonition-title, .md-typeset .important > summary, .md-typeset .hint > .admonition-title, .md-typeset .hint > summary {
+  background-color: #175c521a;
+  border-color: #8af6e6;
+}
+.md-typeset .admonition.tip, .md-typeset details.tip, .md-typeset .admonition.important, .md-typeset details.important, .md-typeset .admonition.hint, .md-typeset details.hint {
+  border-color: #8af6e6;
+}
+.md-typeset .tip > .admonition-title::before, .md-typeset .tip > summary::before, .md-typeset .important > .admonition-title::before, .md-typeset .important > summary::before, .md-typeset .hint > .admonition-title::before, .md-typeset .hint > summary::before {
+  background-color: #40f9f0;
 }
 
 
@@ -126,6 +160,7 @@
   }
 }
 
+
 @media screen and (min-width: 76.25em) {
   /* desktop left nav */
   .md-nav.md-nav--primary {
@@ -133,4 +168,25 @@
     border-radius: 5px;
     padding: 10px 0;
   }  
+}
+
+@media screen and (max-width: 44.9375em) {
+  /* codebox border radius on tablet screen */
+  .md-typeset > .highlight code {
+    border-radius: 5px;
+  }
+}
+
+
+@media screen and (max-width: 30em) {
+  /* codebox border radius on tablet */
+  .md-typeset > .highlight code {
+    border-radius: 0;
+  }
+
+  /* codebox left right spacing on small screen */
+  .md-typeset > .highlight {
+    margin-left: -0.8rem;
+    margin-right: -0.8rem;
+  }
 }
