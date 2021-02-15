@@ -54,7 +54,7 @@ nav:
         - Veracrypt:    pages/veracrypt.md
         - Tor:          pages/tor.md
         - PHP:          pages/php.md
-        - Logwatch:     pages/logwatch.md
+        - Logwatch:     pages/logwatch.m
         - Webhooks:     pages/webhooks.md
         - SQL:          pages/sql.md
         - Flask:        pages/flask.md

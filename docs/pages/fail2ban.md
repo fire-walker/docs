@@ -1,7 +1,7 @@
 ## Commands
 ``` bash
 # fail2ban server status
-sudo service fail2ban stastus
+sudo service fail2ban status
 
 # see jail status
 sudo fail2ban-client status ssh
@@ -13,11 +13,10 @@ sudo fail2ban-client set sshd banip 23.34.45.56
 sudo fail2ban-client set sshd unbanip 23.34.45.56
 ```
 
-
 ## Installation
 Setup a Mail Transfer Agent, for example [postfix](postfix.md).
 
-Then install `fail2ban`. Make sure stop its automatically started service.
+Then install `fail2ban`. Make sure to stop its automatically started service.
 
 ``` bash
 sudo apt install fail2ban
@@ -26,11 +25,9 @@ sudo service fail2ban stop
 
 ## Configuration
 
-Fail2ban reads files from two configuration formats. Files ending with the suffixes `.conf` (original) and `.local` (custom) within `/etc/fail2ban`. The default config files of fail2ban come saved with the suffix `.conf`. 
+Fail2ban reads files from two configuration formats. Files that end with the suffixes `.conf` (original) and `.local` (custom) within `/etc/fail2ban`. The default config files of fail2ban come saved with the suffix `.conf`. Never touch these files. There's a possibility of them being overwritten after package updates. Always make changes after creating a copy of the with the `.local` suffix.
 
-Never touch these files. Modifying them is not recommended cos there's a possibility of them being overwritten after updates. Always make changes after creating a copy of the with the `.local` suffix.
-
-The `.local` file doesn’t have to include all settings from the corresponding `.conf` file, only those that need to be overridden.
+The `.local` files don't have to include all settings from the corresponding `.conf` file, only those that need to be overridden.
 
 The configs below are meant to be self sufficient. Meaning the files don't need extra rules other than the ones stated to function as intended.
 
@@ -126,16 +123,14 @@ actionban = printf %%b "Hi,\n
 name = default
 # addressee of the mail
 dest = fail2ban
-
 ```
 
 ## Troubleshooting
 
 !!! error ""
- When encountering potential ufw conflicts resulting in _already banned_ errors. Check[^1]
+ When encountering potential ufw conflicts resulting in _already banned_ errors. Check[^1]. 
+ 
+ Also check out ufw's OpenSSH app. Cos that's the reference fail2ban uses to ban stuff[^2].
 
-!!! warning ""
-    Check ufw's OpenSSH app. Because this is what gets banned in `jail.local`[^2]
-   
 [^1]: https://askubuntu.com/questions/54771/potential-ufw-and-fail2ban-conflicts
 [^2]: https://www.fail2ban.org/wiki/index.php/FAQ_english
