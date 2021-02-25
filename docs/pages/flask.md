@@ -115,21 +115,11 @@ Write a systemd service file with the `webhook` user and the new group for the h
 
 Since systemd runs services in isolated environments. Without access to the user shell nor any environment variables. So, for private repos an ssh-agent needs to be started every time the script is run for Github authentication. More info [here](../git/#automated-deployment).
 
-First clean the repo of any untracked changes[^3]. Then pull the latest commit. Here only use the `systemctl` commands that were defined in the group the hook instance is running on.
+First clean the repo of any untracked changes. Then pull the latest commit. Find how [here](). Finally reload the site. Make sure to only use the `systemctl` commands that were defined in the group the hook instance is running on. 
 
 ``` bash
-# clean up
-git reset
-git checkout .
-git clean -fdx
-
-# sync to latest
-git pull
-
-# reload site
 systemctl restart <app-service>
 ```
 
 [^1]: https://phoenixnap.com/kb/how-to-create-mariadb-user-grant-privileges
 [^2]: https://stackoverflow.com/questions/54834088/python-database-connection-for-mariadb-using-sqlalchemy
-[^3]: https://stackoverflow.com/questions/14075581/git-undo-all-uncommitted-or-unsaved-changes

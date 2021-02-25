@@ -104,12 +104,12 @@ norestored = 1
 actionstart = printf %%b "Hi,\n
               The jail <name> has been started successfully.\n
               Regards,\n
-              Fail2Ban"|mail -s "Fail2Ban: Started" <dest>
+              Fail2Ban"|mail -s "Code Green: Fail2Ban Started" <dest>
 
 actionstop = printf %%b "Hi,\n
              The jail <name> has been stopped.\n
              Regards,\n
-             Fail2Ban"|mail -s "Fail2Ban: Stopped" <dest>
+             Fail2Ban"|mail -s "Code Red: Fail2Ban Stopped" <dest>
 
 actionban = printf %%b "Hi,\n
             The IP <ip> has just been banned by Fail2Ban after

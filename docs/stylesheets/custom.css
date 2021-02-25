@@ -13,6 +13,8 @@
   --md-code-hl-constant-color:     #b5a8f6; /* codebox const */
   --md-code-hl-number-color:       #ff8686; /* codebox number */
   --md-code-hl-keyword-color:      #40c3ca; /* codebox keywords */
+  --md-code-hl-special-color:      #f758aa; /* codebox special */
+
 
   --md-typeset-kbd-color: var(--md-code-bg-color);
 

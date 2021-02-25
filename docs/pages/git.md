@@ -20,6 +20,20 @@ ssh-add "/key/location"
 
 Then just copy the `.pub` and paste it into `github.com`
 
+## Rollback Changes
+
+This cleans up the repo of any untracked changes as per the last commit then pulls in the latest version.[^1].
+
+``` bash
+# clean up
+git reset
+git checkout .
+git clean -fdx
+
+# sync to latest
+git pull
+```
+
 ## Automated Deployment
 
 There are multiple ways to automate deployment. See the pros and cons of each of these methods [here](https://docs.github.com/en/developers/overview/managing-deploy-keys). For more ways to do this check out this [cheatsheet](https://coolaj86.com/articles/vanilla-devops-git-credentials-cheatsheet/)
@@ -52,3 +66,4 @@ trap "ssh-agent -k" exit
 !!! info ""
     **Always remember to kill what you start.**
 
+[^1]: https://stackoverflow.com/questions/14075581/git-undo-all-uncommitted-or-unsaved-changes

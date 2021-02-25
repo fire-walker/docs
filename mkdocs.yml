@@ -58,4 +58,8 @@ nav:
         - Webhooks:     pages/webhooks.md
         - SQL:          pages/sql.md
         - Flask:        pages/flask.md
+    - Languages:
+        - Python:       pages/python.md
+    - Other:
+        - DuckDuckGo:   pages/duckduckgo.md
 
