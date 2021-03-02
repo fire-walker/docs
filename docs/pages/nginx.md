@@ -21,7 +21,7 @@ server {
 
     location ~ \.php$ {
         include snippets/fastcgi-php.conf;
-        fastcgi_pass unix:/var/run/php/php<version>-fpm.sock;
+        fastcgi_pass unix:/var/run/php/phpx.x-fpm.sock;
     }
 }
 ```

@@ -47,17 +47,19 @@ nav:
         - General:      pages/general.md
         - Storage:      pages/storage.md
         - UFW:          pages/ufw.md
+        - Databases:    pages/database.md
+        - Git:          pages/git.md
     - Applications:
         - Postfix:      pages/postfix.md
         - Fail2Ban:     pages/fail2ban.md
-        - Git:          pages/git.md
         - Veracrypt:    pages/veracrypt.md
         - Tor:          pages/tor.md
         - PHP:          pages/php.md
-        - Logwatch:     pages/logwatch.m
+        - Logwatch:     pages/logwatch.md
         - Webhooks:     pages/webhooks.md
-        - SQL:          pages/sql.md
         - Flask:        pages/flask.md
+        - Nginx:        pages/nginx.md
+        - Apache:       pages/apache.md
     - Languages:
         - Python:       pages/python.md
     - Other:

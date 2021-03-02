@@ -25,33 +25,7 @@ def add_header(r):
 
 ## Connecting a DB
 
-First install and configure SQL. Find out how [here](../SQL). Then create a separate database and user for the web-app.
-
-``` sql
--- create db
-CREATE DATABASE <app-db-name>;
-
--- create user
-CREATE USER '<username>'@localhost IDENTIFIED BY '<password>';
-```
-
-Give the `<username>` user access to the `<app-db-name>` db[^1].
-
-``` sql
--- check user
-SELECT User FROM mysql.user;
-
--- grant privileges
-GRANT ALL PRIVILEGES ON '<app-db-name>'.* TO '<username>'@localhost;
-
--- save grant changes
-FLUSH PRIVILEGES;
-
--- check privileges
-SHOW GRANTS FOR '<username>'@localhost;
-```
-
-Reference the db from the flask app. To get MariaDB working on SQLAlchemy you'll also need to install the `pymysql` package[^2].
+First create a separate database and user for the web-app in the [usual way](../database#usual-process). Then reference the db from the flask app. To get MariaDB working on SQLAlchemy you'll also need to install the `pymysql` package[^2].
 
 ``` py3
 app.config['SQLALCHEMY_DATABASE_URI'] = "mysql+pymysql://<username>:<password>@localhost/<app-db-name>?charset=utf8mb4"

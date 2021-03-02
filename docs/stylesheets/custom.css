@@ -79,7 +79,8 @@
 }
 
 /* hide the hideous footer prev/next */
-.md-footer-nav {
+.md-footer-nav__inner,
+.md-footer__inner {
   display: none;
 }
 
@@ -170,6 +171,16 @@
     border-radius: 5px;
     padding: 10px 0;
   }  
+
+  /* desktop left nav radius when there's scroll */
+  .md-sidebar__scrollwrap {
+    border-radius: 5px;
+    scrollbar-color: var(--md-default-fg-color--lighter) #192435;
+  }
+
+  .md-sidebar__scrollwrap:hover {
+    scrollbar-color: var(--md-accent-fg-color) #192435;
+  }
 }
 
 @media screen and (max-width: 44.9375em) {
