@@ -49,6 +49,7 @@ nav:
         - UFW:          pages/ufw.md
         - Databases:    pages/database.md
         - Git:          pages/git.md
+        - Networking:   pages/networking.md
     - Applications:
         - Postfix:      pages/postfix.md
         - Fail2Ban:     pages/fail2ban.md

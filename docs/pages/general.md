@@ -16,13 +16,18 @@ grep '<keyword(s)>'
 # strip and output only the selected column
 awk '{print $<col_num>}'
 
-# port usage
-netstat -pnltu
-
-# specific port usage
-lsof -i :9000
+# info about a pid
+ps -Flww -p <pid>
 ```
 
+## Site Permissions
+
+Site permissions when popping up a new site.
+
+``` bash
+sudo chown -R www-data:www-data loc/
+sudo chmod -R 755 loc/
+```
 
 
 ## Sudo

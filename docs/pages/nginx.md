@@ -25,3 +25,15 @@ server {
     }
 }
 ```
+
+## Transfer www
+
+First create an A record from both the root domain and the www subdomain towards the ip. Then in the nginx conf file, add the block below seperately
+
+``` nginxconf
+server {
+    listen 80;
+    server_name www.example.com;
+    return 301 $scheme://example.com$request_uri;
+}
+```

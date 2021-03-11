@@ -10,7 +10,7 @@ sudo apt-get autoremove
 
 Then follow a suitable guide and install the correct version
 
-## Switching Active Version
+### Switching Active Version
 
 Enabling and disabling a specific version
 
@@ -31,13 +31,13 @@ service nginx restart
 
 ## Plugins
 
-When installing plugins, don't just install it by it's name. You must specify the php version as well. For example when trying to install the php-xml plugin. For example, running;
+When installing plugins don't just install it by it's name. You must specify the php version as well. For example when trying to install the php-xml plugin. You must run;
 
 ``` bash
 sudo apt install php-xml
 ```
 
-Would install the plugin for the most recent version of php. Which may or may not be the version you have running. So, first check the php version you have running using `php --version`. Then install the package that's relevant to it.
+This would install the plugin for the most recent version of php. Which may or may not be the version you have running. So, first check the php version you have running using `php --version`. Then install the package that's relevant to it.
 
 ``` bash
 # for php7.4
