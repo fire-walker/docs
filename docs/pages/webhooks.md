@@ -45,23 +45,28 @@ Then route all traffic from the port through an Nginx reverse proxy using an SSL
 
 ### Existing Service
 
-Using the default webhook service config to run hook instances. If `/etc/webhook.conf` doesn't exist, just create a new one.
+Using the default webhook service config to run hook instances. 
+
+If `/etc/webhook.conf` doesn't exist, just create a new one. The service file named `webhook.service` should exist at `/etc/systemd/system` by default. If not go to the next topic and manually create one.
 
 ``` bash
 # paste the hooks in here
 sudo nano /etc/webhook.conf
 
+# start it
 sudo systemctl enable webhook
 sudo systemctl start webhook
 ```
 
 ### Systemd Service
 
-Using a systemd service to run a hook instance. Give it a name like `webhook.service` and put it inside of `/etc/systemd/system`
+Using a systemd service to run a hook instance. 
+
+Give it a name like `webhook-one.service` and put it inside of `/etc/systemd/system`. Make sure to intialize and reload the service and systemd. Creating a seperate [group](../general/#groups) and [system user](../general/#system-user) is highly recommended.
 
 ``` ini
 [Unit]
-Description=webhook
+Description=webhook-one
 
 [Service]
 User=webhook
@@ -73,17 +78,4 @@ Restart=on-failure
 
 [Install]
 WantedBy=multi-user.target
-```
-
-Then run and check if it works
-
-``` bash
-# reload systemd
-sudo systemctl daemon-reload
-
-sudo systemctl enable webhook
-sudo systemctl start webhook
-
-# logs
-journalctl -u webhook 
 ```

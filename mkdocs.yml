@@ -32,6 +32,7 @@ markdown_extensions:
 
 
 plugins:
+    - search
     - git-revision-date-localized:
         type: timeago
 
@@ -45,6 +46,7 @@ nav:
     - Home: index.md
     - System:
         - General:      pages/general.md
+        - Systemd:      pages/systemd.md
         - Storage:      pages/storage.md
         - UFW:          pages/ufw.md
         - Databases:    pages/database.md

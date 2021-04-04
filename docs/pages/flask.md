@@ -46,9 +46,11 @@ gunicorn --bind localhost:5000 <app-name>:app
 
 ### Production
 
-When deploying, create a systemd service for the `gunicorn` app and copy it into `/etc/systemd/systems`. See more info about creating systemd services [here](). 
+When deploying, create a systemd service for the `gunicorn`. See more info about creating systemd services [here](../systemd/#service-files). 
 
-Systemd expects the full path of `gunicorn`. See more about workers and optimizations [here](https://medium.com/building-the-system/gunicorn-3-means-of-concurrency-efbb547674b7).
+Find info about workers and optimizations [here](https://medium.com/building-the-system/gunicorn-3-means-of-concurrency-efbb547674b7).
+
+Here's an example systemd config for gunicorn.
 
 ``` ini
 [Unit]
@@ -63,18 +65,6 @@ ExecStart=/usr/local/bin/gunicorn --workers 3 --bind localhost:5000 <app-name>:a
 
 [Install]
 WantedBy=multi-user.target
-```
-
-``` bash
-# reload systemd
-sudo systemctl daemon-reload
-
-# start it
-sudo systemctl enable <app-service>
-sudo systemctl start <app-service>
-
-# status
-sudo systemctl status <app-service>
 ```
 
 ## Hook Instance
