@@ -26,7 +26,7 @@ GRANT ALL PRIVILEGES ON <app-db-name>.* TO '<username>'@localhost;
 FLUSH PRIVILEGES;
 ```
 
-## Userful Commands
+## Useful Commands
 
 ### Checking
 

@@ -36,6 +36,7 @@ Config example for site with `.htaccess` files.
         AllowOverride All    
         Require all granted    
         allow from all 
+        LimitRequestBody 5242880
     </Directory> 
 </VirtualHost>
 ```

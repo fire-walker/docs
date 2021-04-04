@@ -51,7 +51,7 @@ Shit I've sprung up that may or may not be relevant to anyone, other than yours 
 
 ## Desktop
 
-My customizations for my Manjaro desktop.
+Customization dot files for my Manjaro desktop setup.
 
 ??? tip "August 2020"
     Visit it [here](https://github.com/fire-walker/rice/blob/master/August-2020/info.md)

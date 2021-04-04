@@ -140,6 +140,10 @@
   background-color: #40f9f0;
 }
 
+/* list item bottom margin reduced */
+.md-typeset ol li, .md-typeset ul li {
+  margin-bottom: 0.1em;
+}
 
 
 @media screen and (max-width: 76.1875em) {
