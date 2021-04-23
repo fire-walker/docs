@@ -65,6 +65,8 @@ nav:
         - Apache:       pages/apache.md
     - Languages:
         - Python:       pages/python.md
+        - Javascript:   pages/javascript.md
     - Other:
         - DuckDuckGo:   pages/duckduckgo.md
+        - RegEx:        pages/regex.md
 

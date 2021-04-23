@@ -5,6 +5,7 @@
   --md-default-fg-color--light:    #8596a5; /* text title color */
   --md-primary-bg-color:           #8596a5; /* topbar icons */
   --md-accent-fg-color:            #d878cb; /* accent */
+  --md-accent-dark-fg-color:       #a14494; /* accent */
 
 
   --md-code-bg-color:              #151f2e; /* codebox back */
@@ -64,7 +65,7 @@
 .md-typeset table:not([class]) th {
   background-color: var(--md-primary-fg-color);
   color: var(--md-default-fg-color);
-  border-bottom: solid 1px var(--md-accent-fg-color);
+  border-bottom: solid 1px var(--md-accent-dark-fg-color);
 }
 
 /* left nav repo style */

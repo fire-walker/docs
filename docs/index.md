@@ -2,29 +2,29 @@
 
 ## What is this?
 
-This is basically [my](https://github.com/fire-walker) unix knowledge base. I'll continue to update this documentation to help lessen the blow on my retarded memory retention abilities. 
+This is basically [my](https://github.com/fire-walker) unix and everything techy knowledge base. I made this to help lessen the blow on my retarded memory retention abilities. 
 
-This documentation is hosted on Github Pages and is built using [MkDocs](https://github.com/mkdocs/mkdocs) with a customized theme based off of the superb [Material](https://github.com/squidfunk/mkdocs-material) theme.
+This is hosted on Github Pages and is built using [MkDocs](https://github.com/mkdocs/mkdocs) with a customized theme based off of the superb [Material](https://github.com/squidfunk/mkdocs-material) theme.
 
-If you're viewing this and feel like I've made a mistake. Please click that repo icon and shoot me a pull request. I'd appriciate any help.
+If you're viewing this and feel like I've made a mistake. Please click that repo icon and shoot me a pull request. I'd appreciate any help.
 
 
 ## Sites
 
-Shit I've sprung up that may or may not be relevant to anyone, other than yours truly. All of these are hosted on Netlify with CNAMEs of my sub domains pointed towards them.
+Stuff I've sprung up over the course of my learning endeavors.
 
-??? tip "Anime Tracker"
-    One of the best things that happened to me during the pandemic was the boredem that came with staying at home all day. This made me explore a ton of new different technologies. One of them was the js library react. 
+??? tip "AniTracker"
+    One of the best things that happened to me during the pandemic was the boredom that came with staying at home all day. This made me explore a ton of new different technologies. One of them was the js library react. 
 
-    This is the new and improved anime tracker v2. Built using React and hosted on Netlify. The site uses the Anilist GQL api and accesses it using the Apollo Client.
+    This is the new and improved anime tracker v2. Built using React and hosted on Netlify. The site uses the Anilist GQL api to grab data and does it so using the Apollo Client.
 
     Visit it [here](https://anime.thelonelylands.com)
 
-    Find the code [here](https://github.com/fire-walker/anime-tracker-react)
+    <!-- Find the code [here](https://github.com/fire-walker/anime-tracker-react) -->
 
 
 ??? tip "Birthday Tracker"
-    When it comes to remembering birthdays. I suck at it. So, I first made a discord bot. It worked fine up until I had to give up my server. Then as a replacement I made this site. It's got no backend so, all the data is saved right in a nice AES encrypted package within the site's root directory. Even then, without a rightful backend notifications are impossible. Which is why my next big project, an android app made using Kotlin, should probably be _the_ solution for this dilemma.
+    When it comes to remembering birthdays, I suck at it. That's what inspired me to build this. Hosted on Netlify all the data it uses is saved in a nice AES encrypted package within the site's root directory. Even then, without a rightful backend notifications are impossible so this is what I'd consider a half baked solution.
 
     Visit it [here](https://bday.thelonelylands.com)
 
@@ -51,7 +51,7 @@ Shit I've sprung up that may or may not be relevant to anyone, other than yours 
 
 ## Desktop
 
-Customization dot files for my Manjaro desktop setup.
+Dot files for my Manjaro rice.
 
 ??? tip "August 2020"
     Visit it [here](https://github.com/fire-walker/rice/blob/master/August-2020/info.md)
