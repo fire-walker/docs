@@ -10,23 +10,33 @@ sudo mysql_secure_installation
 
 ## Usual Process
 
-Create db and give the `<username>` user access to the `<app-db-name>` db[^1].
+Create db and give the `<username>` user access to the `<db-name>` db[^1].
 
 ``` sql
 -- create db
-CREATE DATABASE <app-db-name>;
+CREATE DATABASE <db-name>;
 
 -- create user
 CREATE USER '<username>'@localhost IDENTIFIED BY '<password>';
 
 -- grant privileges
-GRANT ALL PRIVILEGES ON <app-db-name>.* TO '<username>'@localhost;
+GRANT ALL PRIVILEGES ON <db-name>.* TO '<username>'@localhost;
 
 -- save grant changes
 FLUSH PRIVILEGES;
 ```
 
 ## Useful Commands
+
+### Deleting
+
+``` sql
+-- drop user
+DROP USER '<user-name>'@localhost;
+
+-- drop database
+DROP DATABASE <db-name>
+```
 
 ### Checking
 
