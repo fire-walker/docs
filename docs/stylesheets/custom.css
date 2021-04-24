@@ -17,6 +17,7 @@
   --md-code-hl-special-color:      #f758aa; /* codebox special */
 
 
+
   --md-typeset-kbd-color: var(--md-code-bg-color);
 
   --md-admonition-bg-color:        #111b29;
@@ -97,6 +98,11 @@
   box-shadow: rgba(10, 16, 21, 0.93) 0px 0.1rem 0px 0.05rem, rgb(36, 69, 175) 0px 0.1rem 0px, rgba(43, 65, 87, 0.2) 0px -0.1rem 0.2rem inset;
 }
 
+/* highlight */
+.md-typeset mark {
+  background-color: #66ffcdbd;
+  color: black;
+}
 
 
 

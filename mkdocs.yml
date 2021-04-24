@@ -13,6 +13,8 @@ theme:
     icon:
         repo: fontawesome/brands/github
         logo: octicons/book-16
+    features:
+        - header.autohide
 
 
 markdown_extensions:
@@ -21,6 +23,7 @@ markdown_extensions:
     - pymdownx.keys
     - pymdownx.details
     - pymdownx.smartsymbols
+    - pymdownx.critic
     - pymdownx.tasklist:
         custom_checkbox: true
     - footnotes

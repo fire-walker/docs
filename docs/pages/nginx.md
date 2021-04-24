@@ -6,7 +6,7 @@ To convert `.htaccess` configs to nginx configs. Use [this](https://www.getpages
 
 Here's a base nginx config for php. Make sure to change the php version and the `<url>`.
 
-``` nginxconf
+``` nginx
 server {
     listen 80;
     listen [::]:80;
@@ -30,7 +30,7 @@ server {
 
 First create an A record from both the root domain and the www subdomain towards the ip. Then in the nginx conf file, add the block below seperately
 
-``` nginxconf
+``` nginx
 server {
     listen 80;
     server_name www.example.com;
