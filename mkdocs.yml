@@ -13,8 +13,6 @@ theme:
     icon:
         repo: fontawesome/brands/github
         logo: octicons/book-16
-    features:
-        - header.autohide
 
 
 markdown_extensions:
