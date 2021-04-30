@@ -1,10 +1,10 @@
 ## Setup
 
-Install apache2 and the php plugins. Make sure that php-fpm is already installed. `libapache2-mod-phpx.x` enables apache to run php scripts. `libapache2-mod-fcgid` enables apache to run the php server
+Install apache2 and the php plugins. Make sure that phpx.x-fpm is already installed. Because we're using fpm the original phpx.x package is not needed. `libapache2-mod-fcgid` enables apache to run the php server
 with FPM.
 
 ```bash
-sudo apt install apache2 libapache2-mod-fcgid libapache2-mod-phpx.x
+sudo apt install apache2 libapache2-mod-fcgid
 ```
 
 For apache to handle php you need to edit the `/etc/apache2/mods-enabled/dir.conf`. And replace it's `<IfModule>` with this.
@@ -19,7 +19,8 @@ Now enable the apache php module and FastCGI config module.
 
 ```bash
 sudo a2enmod phpx.x
-sudo a2enmod actions fcgid alias proxy_fcgi
+sudo a2enmod actions fcgid alias proxy_fcgi setenvif
+sudo a2enconf phpx.x-fpm
 
 # don't forget
 sudo service apache2 restart
