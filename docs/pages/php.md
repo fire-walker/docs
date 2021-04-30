@@ -8,11 +8,13 @@ sudo apt-get autoclean
 sudo apt-get autoremove
 ```
 
-Then follow a suitable guide and install the correct version
+Then follow a suitable guide and install the correct version.
 
 ### Switching Active Version
 
-Enabling and disabling a specific version
+Enabling and disabling a specific version.
+
+For plain php;
 
 ``` bash
 # disable
@@ -22,11 +24,21 @@ sudo a2dismod php7.0
 sudo a2enmod php7.2
 ```
 
+For php-fpm;
+
+``` bash
+# disable
+sudo service phpx.x-fpm stop
+
+# enable
+sudo service phpx.x-fpm start
+```
+
 Then rerun web server
 
 ``` bash
-service apache2 restart
-service nginx restart
+sudo service apache2 restart
+sudo service nginx restart
 ```
 
 ## Plugins
