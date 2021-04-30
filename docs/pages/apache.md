@@ -18,7 +18,6 @@ For apache to handle php you need to edit the `/etc/apache2/mods-enabled/dir.con
 Now enable the apache php module and FastCGI config module.
 
 ```bash
-sudo a2enmod phpx.x
 sudo a2enmod actions fcgid alias proxy_fcgi setenvif
 sudo a2enconf phpx.x-fpm
 
