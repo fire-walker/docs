@@ -78,6 +78,7 @@
 /* topbar border */
 .md-header {
   border-bottom: solid 1px var(--md-accent-fg-color);
+  background: linear-gradient(135deg, #151F2E 0%, #171D34 100%);
 }
 
 /* hide the hideous footer prev/next */
@@ -104,6 +105,10 @@
   color: black;
 }
 
+
+.md-typeset img {
+  border-radius: 5px;
+}
 
 
 /* admonition topbar background */
@@ -156,7 +161,8 @@
 @media screen and (max-width: 76.1875em) {
   /* left nav post contents title back */
   .md-nav--primary .md-nav__title {
-    background-color: var(--md-primary-fg-color);
+    /* background-color: var(--md-primary-fg-color); */
+    background: linear-gradient(135deg, #151F2E 0%, #131B38 100%);
   }
 
   /* style logo name in left nav */
@@ -166,11 +172,22 @@
     align-items: center;
     padding: 0;
     font-size: 2.5em;
+    padding-top: 30px;
   }
 
   /* hide logo in mobile left nav */
   .md-nav--primary .md-nav__title .md-logo {
-    display: none;
+    position: absolute;
+    display: block;
+    top: 17px;
+    left: initial;
+    padding: 0;
+    margin: 0;
+  }
+
+  .md-nav--primary .md-nav__title .md-logo img {
+    width: 1.2rem;
+    height: 1.2rem;
   }
 }
 

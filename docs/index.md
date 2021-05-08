@@ -2,7 +2,7 @@
 
 ## What is this?
 
-This is basically [my](https://github.com/fire-walker) unix and everything techy knowledge base. I made this to help lessen the blow on my retarded memory retention abilities. 
+This is basically [my](https://github.com/blekmus) unix and everything techy knowledge base. I made this to help lessen the blow on my retarded memory retention abilities. 
 
 This is hosted on Github Pages and is built using [MkDocs](https://github.com/mkdocs/mkdocs) with a customized theme based off of the superb [Material](https://github.com/squidfunk/mkdocs-material) theme.
 
@@ -20,7 +20,7 @@ Stuff I've sprung up over the course of my learning endeavors.
 
     Visit it [here](https://anime.thelonelylands.com)
 
-    <!-- Find the code [here](https://github.com/fire-walker/anime-tracker-react) -->
+    Find the code [here](https://github.com/blekmus/anime-tracker-react)
 
 
 ??? tip "Birthday Tracker"
@@ -28,7 +28,7 @@ Stuff I've sprung up over the course of my learning endeavors.
 
     Visit it [here](https://bday.thelonelylands.com)
 
-    Find the code [here](https://github.com/fire-walker/birthday-tracker)
+    Find the code [here](https://github.com/blekmus/birthday-tracker)
 
 
 ??? tip "Mythicon - Demo"
@@ -36,7 +36,7 @@ Stuff I've sprung up over the course of my learning endeavors.
 
     Visit it [here](https://project.thelonelylands.com)
 
-    Find the code [here](https://github.com/fire-walker/mythicon-challenge)
+    Find the code [here](https://github.com/blekmus/mythicon-challenge)
 
 
 ??? tip "Old Anime Tracker"
@@ -46,7 +46,7 @@ Stuff I've sprung up over the course of my learning endeavors.
 
     Visit it [here](https://old.anime.thelonelylands.com)
 
-    Find the code [here](https://github.com/fire-walker/anime-tracker)
+    Find the code [here](https://github.com/blekmus/anime-tracker)
 
 
 ## Desktop
@@ -54,4 +54,6 @@ Stuff I've sprung up over the course of my learning endeavors.
 Dot files for my Manjaro rice.
 
 ??? tip "August 2020"
-    Visit it [here](https://github.com/fire-walker/rice/blob/master/August-2020/info.md)
+    ![desktop-image](https://raw.githubusercontent.com/blekmus/rice/master/August-2020/home/.config/previews/Terms.png)
+
+    Find the dots [here](https://github.com/blekmus/rice/blob/master/August-2020/info.md)

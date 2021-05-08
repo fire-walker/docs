@@ -26,7 +26,7 @@ Site permissions when popping up a new site.
 
 ``` bash
 sudo chown -R www-data:www-data loc/
-sudo chmod -R 755 loc/
+sudo chmod -R 774 loc/
 ```
 
 

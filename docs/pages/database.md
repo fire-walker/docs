@@ -49,6 +49,18 @@ SHOW GRANTS FOR '<username>'@localhost;
 
 -- display databases
 SHOW DATABASES;
+
+-- display columns of table
+DESC db.table;
+SHOW COLUMNS FROM db.table;
+```
+
+### Displaying
+
+``` sql
+-- display vertically
+SHOW DATABASES \G;
+SELECT col FROM db \G;
 ```
 
 [^1]: https://www.digitalocean.com/community/tutorials/how-to-install-mariadb-on-ubuntu-20-04
