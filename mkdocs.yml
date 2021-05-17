@@ -1,6 +1,6 @@
 site_name: Docs
-repo_url: https://github.com/fire-walker/docs
-repo_name: fire-walker/docs
+repo_url: https://github.com/blekmus/docs
+repo_name: blekmus/docs
 
 
 theme: 
@@ -12,7 +12,6 @@ theme:
         code: Fira Code
     icon:
         repo: fontawesome/brands/github
-        logo: octicons/book-16
     logo: assets/logo.png
 
 
@@ -47,10 +46,10 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/blekmus
-      name: walker on Github
+      name: Dinil on Github
 
 
-copyright: Copyright &copy; 2020 - 2021 Walker
+copyright: Copyright &copy; 2020 - 2021 Dinil Fernando
 
 
 # Page Tree
@@ -81,4 +80,5 @@ nav:
     - Other:
         - DuckDuckGo:   pages/duckduckgo.md
         - RegEx:        pages/regex.md
+        - GContacts:    pages/gcontacts.md
 

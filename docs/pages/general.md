@@ -29,6 +29,23 @@ sudo chown -R www-data:www-data loc/
 sudo chmod -R 774 loc/
 ```
 
+## Manual Fonts
+
+For a single user place fonts in[^4];
+
+``` sh
+~/.local/share/fonts
+```
+
+For system-wide fonts place them in[^4];
+
+``` sh
+/usr/local/share/fonts
+
+# don't touch this
+# it's only for pacman
+/usr/share/fonts/
+```
 
 ## Sudo
 
@@ -149,3 +166,4 @@ gpg --output <private.pgp> --armor --export-secret-key -r <recipient>
 [^1]: https://ubuntuforums.org/showthread.php?t=1702833
 [^2]: https://askubuntu.com/questions/930768/adding-local-content-in-etc-sudoers-d-instead-of-directly-modifying-sodoers-fi
 [^3]: https://askubuntu.com/questions/692701/allowing-user-to-run-systemctl-systemd-services-without-password
+[^4]:https://wiki.archlinux.org/title/Fonts#Manual_installation
